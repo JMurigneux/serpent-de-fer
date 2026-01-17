@@ -147,7 +147,7 @@ async def reponse_setup(interaction: discord.Interaction, channel: discord.TextC
     bot.save_config()
     await interaction.response.send_message(
         f"Réponses du canal {channel.mention} modifiées.",
-        ephemeral=True
+        # ephemeral=True
     )
 
 @bot.tree.command(name="depart", description="Initie un départ, renvoie les prochains départs des lignes prévues aux arrêts prévus.")
