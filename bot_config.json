@@ -1,0 +1,50 @@
+{
+    "1288175813614899276": {
+        "1461842824671662142": {
+            "600": {
+                "LineRefList": [
+                    "30"
+                ],
+                "DirectionRefList": [
+                    "1"
+                ],
+                "VehicleMode": "undefined",
+                "PreviewInterval": "PT30M",
+                "MaximumStopVisits": 3,
+                "MinimumStopVisitsPerLine": 3,
+                "IncludeGeneralMessage": true,
+                "StartTime": "now"
+            },
+            "233": {
+                "LineRefList": [
+                    "E"
+                ],
+                "DirectionRefList": [
+                    "1"
+                ],
+                "VehicleMode": "undefined",
+                "PreviewInterval": "PT30M",
+                "MaximumStopVisits": 3,
+                "MinimumStopVisitsPerLine": 3,
+                "IncludeGeneralMessage": true,
+                "StartTime": "now"
+            },
+            "69": {
+                "LineRefList": [
+                    "C6",
+                    "72"
+                ],
+                "DirectionRefList": [
+                    "1",
+                    "0"
+                ],
+                "VehicleMode": "undefined",
+                "PreviewInterval": "PT30M",
+                "MaximumStopVisits": 3,
+                "MinimumStopVisitsPerLine": 3,
+                "IncludeGeneralMessage": true,
+                "StartTime": "now"
+            }
+        }
+    }
+}
