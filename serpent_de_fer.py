@@ -152,7 +152,7 @@ async def reponse_setup(interaction: discord.Interaction, channel: discord.TextC
 
 @bot.tree.command(name="depart", description="Initie un départ, renvoie les prochains départs des lignes prévues aux arrêts prévus.")
 async def depart(interaction: discord.Interaction):
-
+    await interaction.response.defer()  #pour si l'opération est trop longue
     guild_id=str(interaction.guild.id)
     channel_id=str(interaction.channel.id)
 
