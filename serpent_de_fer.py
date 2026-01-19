@@ -185,7 +185,7 @@ async def depart(interaction: discord.Interaction):
         dt = datetime.fromisoformat(depart["hdepart"])
         content+=f"- {emoji} {depart["StopPointName"]} : **{dt.strftime("%H:%M")}**\n"
 
-    embed.add_field(name="",value=content, inline=False)
+    embed.add_field(name="",value=content[:1020], inline=False)
     await interaction.followup.send(
         embed=embed,
     )
