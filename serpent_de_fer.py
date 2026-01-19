@@ -183,9 +183,11 @@ async def depart(interaction: discord.Interaction):
         line_padded=f"{depart['ligne']:{'_'}<2}"
         emoji=f"<:{line_padded}:{bot.application_emojis[line_padded]}>"
         dt = datetime.fromisoformat(depart["hdepart"])
-        content+=f"- {emoji} {depart["StopPointName"]} : **{dt.strftime("%H:%M")}**\n"
+        temp_line=f"- {emoji} {depart["StopPointName"]} : **{dt.strftime("%H:%M")}**\n"
+        if len(content)+len(temp_line)<1024:
+            content+=temp_line
 
-    embed.add_field(name="",value=content[:1020], inline=False)
+    embed.add_field(name="",value=content[:1024], inline=False)
     await interaction.followup.send(
         embed=embed,
     )
