@@ -180,7 +180,11 @@ async def depart(interaction: discord.Interaction):
     embed.set_thumbnail(url=IMAGE_LIGNE)  # URL d'une image pour l'illustration
     content=""
     for depart in departs_list:
-        line_padded=f"{depart['ligne']:{'_'}<2}"
+        # line_padded=f"{depart['ligne']:{'_'}<2}"
+        if depart['ligne']=="E":
+            line_padded="E_"
+        else:
+            line_padded=depart['ligne']
         emoji=f"<:{line_padded}:{bot.application_emojis[line_padded]}>"
         dt = datetime.fromisoformat(depart["hdepart"])
         temp_line=f"- {emoji} {depart["StopPointName"]} : **{dt.strftime("%H:%M")}**\n"
